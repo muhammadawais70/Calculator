@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator.</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+	<link rel="stylesheet" type="text/css" href="utils.css">
+	
+</head>
+<body style="background: gray;">
+	<h1 class="text-center">Welcome to Calcutate me.</h1>
+	<div class="container flex flex-col mx-auto just align">
+		<div class="row">
+			<input class="input row-input" type="text" id="display" disabled>
+			
+		</div>
+		<div class="row">
+			<button class="button" onclick="appendToDisplay('7')">7</button>
+			<button class="button" onclick="appendToDisplay('8')">8</button>
+			<button class="button" onclick="appendToDisplay('9')">9</button>
+			<button class="button" onclick="appendToDisplay('*')">*</button>
+		</div>
+		<div class="row">
+			<button class="button" onclick="appendToDisplay('4')">4</button>
+  			<button class="button" onclick="appendToDisplay('5')">5</button>
+  			<button class="button" onclick="appendToDisplay('6')">6</button>
+  			<button class="button" onclick="appendToDisplay('-')">-</button>
+		</div>
+		<div class="row">
+			<button class="button" onclick="appendToDisplay('1')">1</button>
+  			<button class="button" onclick="appendToDisplay('2')">2</button>
+ 			<button class="button" onclick="appendToDisplay('3')">3</button>
+  			<button class="button" onclick="appendToDisplay('+')">+</button>
+		</div>
+		<div class="row">
+	
+		<button class="button" onclick="clearDisplay()">C</button>
+	<button class="button" onclick="appendToDisplay('0')">0</button>
+  <button class="button" onclick="appendToDisplay('.')">.</button>
+  <button class="button" onclick="calculate()">=</button>
+  <button class="button" onclick="appendToDisplay('/')">/</button>
+  
+		</div>
+	</div>
+	<script type="text/javascript">
+	// function to append the clicked button's value to the display
+function appendToDisplay(value) {
+  document.getElementById('display').value += value;
+}
+
+// function to clear the display
+function clearDisplay() {
+  document.getElementById('display').value = '';
+}
+
+// function to calculate the expression in the display
+function calculate() {
+  let displayValue = document.getElementById('display').value;
+  let result = eval(displayValue);
+  document.getElementById('display').value = result;
+}
+
+</script>
+
+
+	
+
+</body>
+</html>

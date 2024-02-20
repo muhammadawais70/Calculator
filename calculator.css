@@ -1,0 +1,19 @@
+.button{
+	padding: 20px;
+	margin: 0px 3px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background-color: ;
+	cursor: pointer;
+}
+.just{
+	justify-content: center;
+}
+.align{
+	align-items: center;
+}
+.button:hover
+{
+	background-color: black;
+	color: white;
+}
